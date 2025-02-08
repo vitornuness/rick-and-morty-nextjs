@@ -6,8 +6,8 @@ import morty from "@/assets/morty.png";
 export default function Home() {
   return (
     <>
-      <section className="container w-96 mx-auto mt-32">
-        <div>
+      <section className="container w-96 md:w-[40%] mx-auto mt-48 md:mt-12">
+        <div className="mb-96 md:mb-4">
           <LightBox
             src={rickAndMorty}
             alt="Rick and Morty saindo de um portal verde."
@@ -15,7 +15,7 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-32 my-32">
           <div className="flex justify-between items-center">
-            <p className="w-96">
+            <p className="w-96 md:w-full">
               <span className="font-bold">Rick Sanchez</span> é um cientista
               louco e amoral que, após desaparecer por 20 anos, retorna para a
               sua familia e começa a sair em aventuras fatais e em grande parte,
@@ -31,7 +31,7 @@ export default function Home() {
               src={morty}
               alt="Morty está voltado para a direita e surpreso."
             />
-            <p className="w-96">
+            <p className="w-96 md:w-full">
               <span className="font-bold">Morty Smith</span> é neto de Rick
               Sanchez e frequentemente é forçado a acompanhá-lo em suas várias
               desventuras.
