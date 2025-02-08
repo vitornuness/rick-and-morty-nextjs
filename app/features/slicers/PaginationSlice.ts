@@ -15,10 +15,12 @@ const paginationSlice = createSlice({
   initialState,
   reducers: {
     nextPage: (state) => {
-      state.page < state.maxPages ? state.page++ : null;
+      return state.page < state.maxPages
+        ? { ...state, page: state.page + 1 }
+        : state;
     },
     prevPage: (state) => {
-      state.page > 1 ? state.page-- : null;
+      return state.page > 1 ? { ...state, page: state.page - 1 } : state;
     },
   },
   selectors: {
